@@ -183,14 +183,13 @@ header.scroll-on {
 .choices__list--single .choices__item {
     font-size: 1rem;
 }
-
-
+.choices {
+margin-bottom: 0;
+}
 
 .slick-dots {
     bottom: -50px;
 }
-
-
 
 .slick-dots {
     margin-top: 20px;
