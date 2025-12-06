@@ -6,7 +6,35 @@ window.onscroll = function () {
         nav.classList.remove("scroll-on");
     }
 };
+const tabButtons = document.querySelectorAll(".tab-btn");
+const tabContents = document.querySelectorAll(".tab-content");
 
+tabButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        tabButtons.forEach((b) => {
+            b.classList.remove("text-[var(--primary-color)]");
+            b.classList.add("text-gray-600");
+            b.querySelector(".underline-bar").classList.add("hidden");
+        });
+        tabContents.forEach((c) => c.classList.add("hidden"));
+        btn.classList.add("text-[var(--primary-color)]");
+        btn.classList.remove("text-gray-600");
+        btn.querySelector(".underline-bar").classList.remove("hidden");
+        const target = btn.getAttribute("data-tab");
+        document.getElementById(target).classList.remove("hidden");
+    });
+});
+const modal = document.getElementById('bookingModal');
+
+function openModal() {
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+}
+
+function closeModal() {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+}
 $('.testimonial-slider').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -47,7 +75,20 @@ openBtn.addEventListener("click", () => {
 
 closeBtn.addEventListener("click", closeMenuHandler);
 backdrop.addEventListener("click", closeMenuHandler);
+document.querySelectorAll(".dropdown-toggle").forEach((btn) => {
+    btn.addEventListener("click", () => {
+        const submenu = btn.nextElementSibling;
+        const icon = btn.querySelector("i");
 
+        if (submenu.style.maxHeight) {
+            submenu.style.maxHeight = null;     // Collapse
+            icon.classList.remove("rotate-180");
+        } else {
+            submenu.style.maxHeight = submenu.scrollHeight + "px";  // Expand
+            icon.classList.add("rotate-180");
+        }
+    });
+});
 function closeMenuHandler() {
     mobileMenu.classList.add("translate-x-full");
     mobileMenu.classList.remove("translate-x-0");

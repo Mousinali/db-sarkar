@@ -65,9 +65,9 @@
             <!-- LEFT: LOGO -->
             <div class="flex items-center">
                 <img src="assets/images/logo/logo.webp" alt="Logo" class="sm:h-14 h-12 w-auto">
-                <nav class="hidden lg:flex items-center space-x-8 font-medium ml-12">
+                <nav class="hidden xl:flex items-center space-x-8 font-medium ml-12">
 
-                    <ul class="flex items-center space-x-8">
+                    <ul class="flex items-center space-x-4 xl:space-x-8">
 
                         <!-- HOME -->
                         <li>
@@ -192,20 +192,20 @@
                         <p class="font-semibold text-gray-900 text-xl mt-0.5">98765 41230</p>
                     </div>
                 </div>
-                <button id="openMenu" class="p-1 text-4xl" aria-label="Open Menu">
-                    <i class="ri-menu-line cursor-pointer"></i>
-                </button>
+
 
                 <!-- Appointment Button -->
                 <div class="hidden lg:block">
-                    <a href="#" class="btn1 ">
+                    <button onclick="openModal()" class="btn1">
                         Appointment
                         <span class="icon">
                             <i class="ri-arrow-right-up-line"></i>
                         </span>
-                    </a>
+                    </button>
                 </div>
-
+                <button id="openMenu" class="p-1 text-4xl xl:hidden" aria-label="Open Menu">
+                    <i class="ri-menu-line cursor-pointer"></i>
+                </button>
 
             </div>
             <div id="backdrop" class="fixed inset-0 bg-black/50 opacity-0 invisible transition-all duration-300 z-40">
@@ -224,26 +224,67 @@
                 </div>
 
                 <!-- Menu Items -->
-                <ul class="flex flex-col divide-y divide-dotted divide-gray-300">
-                    <li><a href="index.html"
-                            class="block px-5 py-3 text-gray-800 hover:text-[var(--primary-color)]">Home</a>
+                <ul class="flex flex-col divide-y divide-dotted divide-gray-300 text-gray-800">
+
+                    <!-- HOME -->
+                    <li>
+                        <a href="index.html" class="block px-5 py-3 hover:text-[var(--primary-color)]">Home</a>
                     </li>
-                    <li><a href="about.html"
-                            class="block px-5 py-3 text-gray-800 hover:text-[var(--primary-color)]">About Us</a>
+
+                    <!-- ABOUT US -->
+                    <li class="relative">
+                        <button class="w-full px-5 py-3 flex justify-between items-center dropdown-toggle">
+                            <span>About Us</span>
+                            <i class="ri-arrow-down-s-line text-xl transition-transform duration-300"></i>
+                        </button>
+
+                        <ul
+                            class="submenu max-h-0 overflow-hidden transition-all duration-300 bg-gray-50 pl-10 list-disc">
+                            <li><a href="#" class="block py-2 text-sm hover:text-[var(--primary-color)]">Our Vision</a>
+                            </li>
+                            <li><a href="#" class="block py-2 text-sm hover:text-[var(--primary-color)]">Our Mission</a>
+                            </li>
+                            <li><a href="#" class="block py-2 text-sm hover:text-[var(--primary-color)]">Director
+                                    Desk</a></li>
+                        </ul>
                     </li>
-                    <li><a href="#" class="block px-5 py-3 text-gray-800 hover:text-[var(--primary-color)]">Services</a>
+
+                    <!-- SERVICES -->
+                    <li class="relative">
+                        <button class="w-full px-5 py-3 flex justify-between items-center dropdown-toggle">
+                            <span>Services</span>
+                            <i class="ri-arrow-down-s-line text-xl transition-transform duration-300"></i>
+                        </button>
+
+                        <ul
+                            class="submenu max-h-0 overflow-hidden transition-all duration-300 bg-gray-50 pl-10 list-disc">
+                            <li><a href="#" class="block py-2 text-sm hover:text-[var(--primary-color)]">Clinical
+                                    Services</a></li>
+                            <li><a href="#" class="block py-2 text-sm hover:text-[var(--primary-color)]">Laser
+                                    Services</a></li>
+                            <li><a href="#" class="block py-2 text-sm hover:text-[var(--primary-color)]">Diagnostic
+                                    Services</a></li>
+                        </ul>
                     </li>
-                    <li><a href="plan.html"
-                            class="block px-5 py-3 text-gray-800 hover:text-[var(--primary-color)]">Plans</a>
+
+                    <!-- PLANS -->
+                    <li>
+                        <a href="plan.html" class="block px-5 py-3 hover:text-[var(--primary-color)]">Plans</a>
                     </li>
-                    <li><a href="blogs.html"
-                            class="block px-5 py-3 text-gray-800 hover:text-[var(--primary-color)]">Health
-                            Blogs</a>
+
+                    <!-- BLOGS -->
+                    <li>
+                        <a href="blogs.html" class="block px-5 py-3 hover:text-[var(--primary-color)]">Health Blogs</a>
                     </li>
-                    <li><a href="contact.html"
-                            class="block px-5 py-3 text-gray-800 hover:text-[var(--primary-color)]">Contact
-                            Us</a></li>
+
+                    <!-- CONTACT -->
+                    <li>
+                        <a href="contact.html" class="block px-5 py-3 hover:text-[var(--primary-color)]">Contact Us</a>
+                    </li>
+
                 </ul>
+
+
 
                 <!-- Contact Info -->
                 <ul class="flex flex-col divide-y divide-dotted divide-gray-300 mt-2 text-sm border-t border-slate-200">
@@ -328,12 +369,12 @@
                 <div class="flex items-center gap-8">
 
                     <!-- Appointment Button -->
-                    <a href="#" class="btn1">
+                    <button onclick="openModal()" class="btn1">
                         Book An Appointment
                         <span class="icon">
                             <i class="ri-arrow-right-up-line"></i>
                         </span>
-                    </a>
+                    </button>
 
                     <!-- Whatsapp Contact -->
                     <div class="sm:flex hidden items-center gap-3 pl-6 border-l border-[#c7c7c7] ">
@@ -786,9 +827,9 @@
                     <p class="font-light lg:text-base text-sm">Schedule your evaluation and understand the right care
                         for your vision.</p>
                 </div>
-                <a href="#"
+                <button onclick="openModal()"
                     class="bg-green-600 text-white lg:mt-0 mt-5 lg:text-base text-sm px-8 py-3 inline-block rounded-md font-medium hover:bg-green-700 transition cursor-pointer">Book
-                    Appointment</a>
+                    Appointment</button>
             </div>
         </div>
     </section>
@@ -797,7 +838,8 @@
         <div class="container">
             <h2 class="text-center font-semibold lg:mb-3 mb-2 my-font text-2xl sm:text-3xl lg:text-4xl">Blogs & Updates
             </h2>
-            <p class="text-[#4b4b4b] lg:text-xl sm:text-lg text-sm text-center sm:mb-12 mb-10 my-font">Easy-to-understand guides
+            <p class="text-[#4b4b4b] lg:text-xl sm:text-lg text-sm text-center sm:mb-12 mb-10 my-font">
+                Easy-to-understand guides
                 and stories about eye
                 health.
             </p>
@@ -1050,26 +1092,8 @@
             allowHTML: true,
         });
     </script>
-    <script>
-        const tabButtons = document.querySelectorAll(".tab-btn");
-        const tabContents = document.querySelectorAll(".tab-content");
 
-        tabButtons.forEach((btn) => {
-            btn.addEventListener("click", () => {
-                tabButtons.forEach((b) => {
-                    b.classList.remove("text-[var(--primary-color)]");
-                    b.classList.add("text-gray-600");
-                    b.querySelector(".underline-bar").classList.add("hidden");
-                });
-                tabContents.forEach((c) => c.classList.add("hidden"));
-                btn.classList.add("text-[var(--primary-color)]");
-                btn.classList.remove("text-gray-600");
-                btn.querySelector(".underline-bar").classList.remove("hidden");
-                const target = btn.getAttribute("data-tab");
-                document.getElementById(target).classList.remove("hidden");
-            });
-        });
-    </script>
+
 
 
 </body>
