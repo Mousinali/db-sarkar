@@ -35,6 +35,32 @@ html {
     padding: 0 1rem;
 }
 
+header.scroll-on {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 49;
+    transition: all ease-in-out 0.5s;
+    box-shadow: 0 -2px 20px 5px #3d3d3d21;
+    animation: fadeInDown 0.45s ease-in-out;
+    margin-top: 0;
+}
+
+@keyframes fadeInDown {
+    0% {
+        top: -30%;
+    }
+
+    50% {
+        top: -15%;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
 .btn1 {
     background: #2A2E99;
     color: #ffffff;

@@ -17,20 +17,21 @@
 
 <body>
 
-    <div class="bg-[var(--primary-color)] text-white py-1.75 rounded-b-full">
+    <div
+        class="bg-[var(--primary-color)] text-white py-1.75 hidden sm:block lg:rounded-b-full rounded-b-3xl absolute top-0 left-0 right-0">
         <div class="container flex items-center justify-between">
 
             <!-- Left Side -->
             <div class="flex items-center space-x-6 text-sm">
 
                 <!-- Email -->
-                <div class="flex items-center space-x-2">
+                <div class="lg:flex hidden items-center space-x-2">
                     <i class="ri-mail-send-fill text-lg"></i>
                     <span>support@gmail.com</span>
                 </div>
 
                 <!-- Location -->
-                <div class="flex items-center space-x-2">
+                <div class="lg:flex hidden items-center space-x-2">
                     <i class="ri-map-pin-2-fill text-lg"></i>
                     <span>Kasba, Kolkata - 700 048</span>
                 </div>
@@ -58,33 +59,120 @@
         </div>
     </div>
 
-
-    <header class="w-full bg-white py-4 border-b border-[#c7c7c7]">
+    <header class="w-full bg-white sm:py-4 py-3 border-b border-[#c7c7c7] absolute sm:top-[50px] top-0 left-0 right-0">
         <div class="container flex items-center justify-between">
 
             <!-- LEFT: LOGO -->
             <div class="flex items-center">
-                <img src="assets/images/logo/logo.webp" alt="Logo" class="h-14 w-auto">
+                <img src="assets/images/logo/logo.webp" alt="Logo" class="sm:h-14 h-12 w-auto">
                 <nav class="hidden lg:flex items-center space-x-8 font-medium ml-12">
-                    <a href="#" class="hover:text-blue-900">Home</a>
 
-                    <div class="relative group">
-                        <a href="#" class="flex items-center hover:text-blue-900">
-                            About Us
-                            <i class="ri-arrow-down-s-fill ml-2"></i>
-                        </a>
-                    </div>
+                    <ul class="flex items-center space-x-8">
 
-                    <div class="relative group">
-                        <a href="#" class="flex items-center hover:text-blue-900">
-                            Services
-                            <i class="ri-arrow-down-s-fill ml-2"></i>
-                        </a>
-                    </div>
+                        <!-- HOME -->
+                        <li>
+                            <a href="#"
+                                class="relative group m-2 transition-all duration-300 text-gray-700 hover:text-[var(--primary-color)]">
+                                Home
+                                <span
+                                    class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--primary-color)] transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                        </li>
 
-                    <a href="#" class="hover:text-blue-900">Career</a>
-                    <a href="#" class="hover:text-blue-900">Contact Us</a>
+                        <!-- SERVICES DROPDOWN (LI + UL structure) -->
+                        <li class="relative group">
+
+                            <!-- Trigger -->
+                            <a href="#"
+                                class="relative transition-all duration-300 text-gray-700 hover:text-[var(--primary-color)] flex items-center">
+                                About Us
+                                <i class="ri-arrow-drop-down-fill text-xl ml-1"></i>
+
+                                <!-- Underline -->
+                                <span
+                                    class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--primary-color)] transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+
+                            <!-- Dropdown -->
+                            <ul
+                                class="absolute left-0 top-10 min-w-48 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform scale-95 group-hover:scale-100 border border-gray-200 z-10 overflow-hidden pb-2 pt-1">
+
+                                <li>
+                                    <a href="#"
+                                        class="block text-sm px-4 py-[6px] text-gray-700 hover:text-[var(--primary-color)] hover:bg-slate-100 transition-all">
+                                        Our Vision
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#"
+                                        class="block text-sm px-4 py-[6px] text-gray-700 hover:text-[var(--primary-color)] hover:bg-slate-100 transition-all">
+                                        Our Mission
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#"
+                                        class="block text-sm px-4 py-[6px] text-gray-700 hover:text-[var(--primary-color)] hover:bg-slate-100 transition-all">
+                                        Director Desk
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="relative group">
+
+                            <!-- Trigger -->
+                            <a href="#"
+                                class="relative transition-all duration-300 text-gray-700 hover:text-[var(--primary-color)] flex items-center">
+                                Services
+                                <i class="ri-arrow-drop-down-fill text-xl ml-1"></i>
+
+                                <!-- Underline -->
+                                <span
+                                    class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--primary-color)] transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+
+                            <!-- Dropdown -->
+                            <ul
+                                class="absolute left-0 top-10 min-w-48 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform scale-95 group-hover:scale-100 border border-gray-200 z-10 overflow-hidden pb-2 pt-1">
+
+                                <li>
+                                    <a href="#"
+                                        class="block text-sm px-4 py-[6px] text-gray-700 hover:text-[var(--primary-color)] hover:bg-slate-100 transition-all">
+                                        Clinical Services
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#"
+                                        class="block text-sm px-4 py-[6px] text-gray-700 hover:text-[var(--primary-color)] hover:bg-slate-100 transition-all">
+                                        Laser Services
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#"
+                                        class="block text-sm px-4 py-[6px] text-gray-700 hover:text-[var(--primary-color)] hover:bg-slate-100 transition-all">
+                                        Diagnostic Services
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- CAREER -->
+                        <li>
+                            <a href="#" class="hover:text-blue-900">Career</a>
+                        </li>
+
+                        <!-- CONTACT -->
+                        <li>
+                            <a href="#" class="hover:text-blue-900">Contact Us</a>
+                        </li>
+
+                    </ul>
+
                 </nav>
+
             </div>
 
             <!-- CENTER: MENU -->
@@ -94,7 +182,7 @@
             <div class="flex items-center gap-8">
 
                 <!-- Emergency Call -->
-                <div class="flex items-center gap-4 pr-8 border-r border-[#c7c7c7]">
+                <div class="sm:flex hidden items-center gap-4 md:pr-8 lg:border-r border-[#c7c7c7]">
 
                     <!-- Phone Icon -->
                     <img src="assets/images/icons/cal-icon.svg" alt="">
@@ -104,22 +192,118 @@
                         <p class="font-semibold text-gray-900 text-xl mt-0.5">98765 41230</p>
                     </div>
                 </div>
+                <button id="openMenu" class="p-1 text-4xl" aria-label="Open Menu">
+                    <i class="ri-menu-line cursor-pointer"></i>
+                </button>
 
                 <!-- Appointment Button -->
-                <a href="#" class="btn1">
-                    Appointment
-                    <span class="icon">
-                        <i class="ri-arrow-right-up-line"></i>
-                    </span>
-                </a>
+                <div class="hidden lg:block">
+                    <a href="#" class="btn1 ">
+                        Appointment
+                        <span class="icon">
+                            <i class="ri-arrow-right-up-line"></i>
+                        </span>
+                    </a>
+                </div>
 
+
+            </div>
+            <div id="backdrop" class="fixed inset-0 bg-black/50 opacity-0 invisible transition-all duration-300 z-40">
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu"
+                class="fixed top-0 right-0 bottom-0 w-[320px] bg-white flex flex-col shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto">
+
+                <!-- Header -->
+                <div class="flex justify-between items-center px-5 py-3 border-b border-gray-200">
+                    <img src="assets/images/logo/logo.webp" class="h-[36px]" alt="Logo">
+                    <button id="closeMenu" aria-label="Close Menu" class="cursor-pointer">
+                        <i class="ri-close-line text-3xl text-gray-700 hover:text-red-600"></i>
+                    </button>
+                </div>
+
+                <!-- Menu Items -->
+                <ul class="flex flex-col divide-y divide-dotted divide-gray-300">
+                    <li><a href="index.html"
+                            class="block px-5 py-3 text-gray-800 hover:text-[var(--primary-color)]">Home</a>
+                    </li>
+                    <li><a href="about.html"
+                            class="block px-5 py-3 text-gray-800 hover:text-[var(--primary-color)]">About Us</a>
+                    </li>
+                    <li><a href="#" class="block px-5 py-3 text-gray-800 hover:text-[var(--primary-color)]">Services</a>
+                    </li>
+                    <li><a href="plan.html"
+                            class="block px-5 py-3 text-gray-800 hover:text-[var(--primary-color)]">Plans</a>
+                    </li>
+                    <li><a href="blogs.html"
+                            class="block px-5 py-3 text-gray-800 hover:text-[var(--primary-color)]">Health
+                            Blogs</a>
+                    </li>
+                    <li><a href="contact.html"
+                            class="block px-5 py-3 text-gray-800 hover:text-[var(--primary-color)]">Contact
+                            Us</a></li>
+                </ul>
+
+                <!-- Contact Info -->
+                <ul class="flex flex-col divide-y divide-dotted divide-gray-300 mt-2 text-sm border-t border-slate-200">
+                    <!-- Phone -->
+                    <li class="block px-5 py-3">
+                        <span class="text-sm font-medium text-gray-800">
+                            Phone
+                        </span>
+                        <p class="mt-1">
+                            <a href="tel:9163261134"
+                                class="text-[var(--primary-color)] hover:underline font-medium">9163261134</a>
+                            <span class="text-gray-500 mx-1">/</span>
+                            <a href="tel:9830126400"
+                                class="text-[var(--primary-color)] hover:underline font-medium">9830126400</a>
+                        </p>
+                    </li>
+
+                    <!-- Email -->
+                    <li class="block px-5 py-3">
+                        <span class="text-sm font-medium text-gray-800">
+                            Email
+                        </span>
+                        <p class="mt-1">
+                            <a href="mailto:info@healgene.life"
+                                class="block text-[var(--primary-color)] hover:underline font-medium">info@healgene.life</a>
+                            <a href="mailto:healgene.life@gmail.com"
+                                class="block text-[var(--primary-color)] hover:underline font-medium mt-2">healgene.life@gmail.com</a>
+                        </p>
+                    </li>
+                    <!-- Corporate Office -->
+                    <li class="block px-5 py-3">
+                        <span class="text-sm font-medium text-gray-800">
+                            Corporate Office
+                        </span>
+                        <p class="mt-1 leading-relaxed text-gray-600">
+                            Regus, RDB Boulevard, 5th Floor, BP Block, Sector V, Bidhannagar,<br>
+                            Kolkata, West Bengal 700091
+                        </p>
+                    </li>
+
+                    <!-- City Office -->
+                    <li class="block px-5 py-3">
+                        <span class="text-sm font-medium text-gray-800">
+                            City Office
+                        </span>
+                        <p class="mt-1 leading-relaxed text-gray-600">
+                            FA-8, 2082, Rajdanga Main Road, Narkelbagan, Sector F, East Kolkata Township,<br>
+                            Kolkata, West Bengal 700107
+                        </p>
+                    </li>
+
+
+                </ul>
 
             </div>
         </div>
     </header>
 
     <section
-        class="w-full bg-gray-100 py-20 bg-[url('assets/images/banner/banner-bg.webp')] bg-cover h-[84vh] content-center">
+        class="w-full bg-gray-100 lg:py-20 lg:bg-[url('assets/images/banner/banner-bg.webp')] bg-cover bg-[url('assets/images/banner/small-bg.jpg')] sm:py-16 py-12 h-auto lg:h-[84vh] content-center sm:mt-[139px] mt-[73px]">
         <div class="container">
             <div class="max-w-xl">
                 <!-- Small Tag -->
@@ -129,13 +313,13 @@
                 </span>
 
                 <!-- Heading -->
-                <h1 class="text-4xl lg:text-5xl leading-tight my-font font-semibold mb-6">
+                <h1 class="sm:text-4xl text-3xl lg:text-5xl leading-tight my-font font-semibold mb-6">
                     Advanced Eye Care for a <br>
                     <span class="text-[var(--primary-color)] font-bold">Clearer Tomorrow.</span>
                 </h1>
 
                 <!-- Description -->
-                <p class="text-[18px] mb-10">
+                <p class="sm:text-[18px] text-base mb-10">
                     Experience trusted, specialized treatment backed by modern technology
                     and highly qualified eye care experts. Your vision is our priority.
                 </p>
@@ -152,7 +336,7 @@
                     </a>
 
                     <!-- Whatsapp Contact -->
-                    <div class="flex items-center gap-3 pl-6 border-l border-[#c7c7c7] ">
+                    <div class="sm:flex hidden items-center gap-3 pl-6 border-l border-[#c7c7c7] ">
                         <span class="text-green-600 text-5xl">
                             <i class="ri-whatsapp-line"></i>
                         </span>
@@ -167,17 +351,20 @@
         </div>
     </section>
 
-    <section class="py-16 about">
+    <section class="md:py-16 sm:py-12 py-8 about">
         <div class="container">
-            <h2 class="text-center font-semibold mb-3 my-font text-4xl">Our Scope of Services</h2>
-            <p class="text-[#4b4b4b] text-xl text-center mb-12 my-font">Comprehensive eye care with modern technology.
+            <h2 class="text-center font-semibold lg:mb-3 mb-2 my-font text-2xl sm:text-3xl lg:text-4xl">Our Scope of
+                Services</h2>
+            <p class="text-[#4b4b4b] lg:text-xl text-base text-center mb-12 my-font">Comprehensive eye care with modern
+                technology.
             </p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 lg:gap-8 gap-6">
                 <div
                     class="bg-[#F2F2F2] rounded-2xl border border-[#c7c7c7] relative flex flex-col justify-between overflow-hidden">
                     <div class="p-8 pb-0">
-                        <h3 class="text-3xl my-font font-semibold mb-4">Clinical Services</h3>
-                        <p class="leading-relaxed mb-5 font-normal">Comprehensive treatment for all major and complex
+                        <h3 class="lg:text-3xl text-2xl my-font font-semibold mb-4">Clinical Services</h3>
+                        <p class="leading-relaxed mb-5 lg:text-base text-sm font-normal">Comprehensive treatment for all
+                            major and complex
                             eye conditions, managed by experienced specialists across multiple ophthalmic departments.
                         </p>
                         <a href="#"
@@ -191,8 +378,9 @@
                 <div
                     class="bg-[#F2F2F2]  rounded-2xl border border-[#c7c7c7] relative flex flex-col justify-between overflow-hidden">
                     <div class="p-8 pb-0">
-                        <h3 class="text-3xl my-font font-semibold mb-4">Laser Services</h3>
-                        <p class="leading-relaxed mb-5 font-normal">Advanced laser-based procedures designed for
+                        <h3 class="lg:text-3xl text-2xl my-font font-semibold mb-4">Laser Services</h3>
+                        <p class="leading-relaxed mb-5 lg:text-base text-sm font-normal">Advanced laser-based procedures
+                            designed for
                             precise, safe, and effective treatment of cataract complications, glaucoma, and retinal
                             disorders.</p>
                         <a href="#"
@@ -206,8 +394,9 @@
                 <div
                     class="bg-[#F2F2F2]  rounded-2xl border border-[#c7c7c7] relative flex flex-col justify-between overflow-hidden">
                     <div class="p-8 pb-0">
-                        <h3 class="text-3xl my-font font-semibold mb-4">Diagnostic Services</h3>
-                        <p class="leading-relaxed mb-5 font-normal">State-of-the-art diagnostic tests and imaging
+                        <h3 class="lg:text-3xl text-2xl my-font font-semibold mb-4">Diagnostic Services</h3>
+                        <p class="leading-relaxed mb-5 lg:text-base text-sm font-normal">State-of-the-art diagnostic
+                            tests and imaging
                             technologies that ensure accurate detection, monitoring, and evaluation of eye diseases.</p>
                         <a href="#"
                             class="text-[var(--primary-color)] my-font font-medium inline-flex items-center gap-1">Learn
@@ -221,12 +410,16 @@
         </div>
     </section>
 
-    <section class="cta py-16 bg-[url(assets/images/cta/cta-bg.jpg)]">
+    <section class="booking md:py-16 sm:py-12 py-8 bg-[url(assets/images/cta/cta-bg.jpg)]">
         <div class="container">
-            <h2 class="text-center font-semibold mb-3 my-font text-4xl text-white">Quick Appointment Booking</h2>
-            <p class="text-xl text-center mb-12 text-white my-font"> Enter your details and our medical team will
+            <h2 class="text-center font-semibold lg:mb-3 mb-2 my-font text-2xl sm:text-3xl lg:text-4xl text-white">Quick
+                Appointment
+                Booking</h2>
+            <p class="lg:text-xl sm:text-lg text-sm text-center sm:mb-12 mb-10 text-white my-font"> Enter your details
+                and our
+                medical team will
                 connect with you shortly.</p>
-            <form class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <form class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
                 <!-- Full Name -->
                 <div>
@@ -237,14 +430,14 @@
 
                 <!-- Phone Number -->
                 <div>
-                    <label class="text-white text-sm block mb-2.5">Phone number</label>
+                    <label class="text-white text-sm block mb-2.5">Phone N umber</label>
                     <input type="text" placeholder="Enter phone number"
                         class="w-full rounded-md px-4 py-3.25 bg-white shadow-sm focus:ring-2 focus:ring-blue-400 outline-none" />
                 </div>
 
                 <!-- Choose Service (Searchable Select) -->
                 <div>
-                    <label class="text-white text-sm font-medium mb-2.5 block">Choose service</label>
+                    <label class="text-white text-sm font-medium mb-2.5 block">Choose Service</label>
 
                     <div class="relative">
                         <select id="serviceSelect"
@@ -265,19 +458,19 @@
 
                 <!-- Select Date -->
                 <div>
-                    <label class="text-white text-sm block mb-2.5">Select date</label>
+                    <label class="text-white text-sm block mb-2.5">Select Date</label>
 
                     <div class="relative">
-                        <input type="text" placeholder="dd-mm-yyyy"
-                            class="w-full rounded-md px-4 py-3.25 bg-white shadow-sm focus:ring-2 focus:ring-blue-400 outline-none" />
-                        <i class="ri-calendar-line absolute right-3 top-3 text-gray-500"></i>
+                        <input type="text" placeholder="Enter Date" class="w-full rounded-md px-4 py-3.25 bg-white border border-gray-300 shadow-sm 
+                   focus:ring-2 focus:ring-blue-400 focus:border-blue-400 outline-none" />
                     </div>
                 </div>
+
 
             </form>
 
             <!-- SUBMIT BUTTON -->
-            <div class="text-center mt-8">
+            <div class="text-center mt-12">
                 <button
                     class="bg-green-600 text-white px-8 py-3 rounded-md font-medium hover:bg-green-700 transition cursor-pointer">
                     Submit Your Booking
@@ -286,14 +479,16 @@
         </div>
     </section>
 
-    <section class="py-16">
+    <section class="md:py-16 sm:py-12 py-8">
         <div class="container">
-            <h2 class="text-center font-semibold mb-3 my-font text-4xl">Services We Provide</h2>
-            <p class="text-[#4b4b4b] text-xl text-center mb-12 my-font">All essential eye care services in one place.
+            <h2 class="text-center font-semibold lg:mb-3 mb-2 my-font text-2xl sm:text-3xl lg:text-4xl">Services We
+                Provide</h2>
+            <p class="text-[#4b4b4b] lg:text-xl sm:text-lg text-sm text-center mb-12 ">All essential eye care services
+                in one place.
             </p>
 
             <!-- TAB BUTTONS -->
-            <div class="flex justify-center gap-12 mt-12 select-none">
+            <div class="flex justify-center sm:gap-12 gap-8 mt-12 select-none">
 
                 <button class="tab-btn text-xl cursor-pointer text-[var(--primary-color)] font-medium relative pb-2"
                     data-tab="clinical">
@@ -318,45 +513,45 @@
             </div>
 
             <!-- CLINICAL CONTENT -->
-            <div id="clinical" class="tab-content grid md:grid-cols-4 gap-6 mt-12">
+            <div id="clinical" class="tab-content grid lg:grid-cols-4 sm:grid-cols-2 lg:gap-6 gap-5 mt-12">
 
                 <div class="p-6 bg-gray-100 rounded-xl border-[#E5E7EB]">
-                    <h3 class="text-2xl font-semibold">Cataract</h3>
+                    <h3 class="lg:text-2xl text-xl font-semibold">Cataract</h3>
                     <p class="text-gray-600 mt-2">Cloudy lens treatment with safe, advanced cataract surgery.</p>
                     <a href="#" class="inline-flex items-center mt-4 text-[var(--primary-color)] text-sm">Read more
                         →</a>
                 </div>
 
                 <div class="p-6 bg-gray-100 rounded-xl border-[#E5E7EB]">
-                    <h3 class="text-2xl font-semibold">Cornea</h3>
+                    <h3 class="lg:text-2xl text-xl font-semibold">Cornea</h3>
                     <p class="text-gray-600 mt-2">Care for infections, injuries & complex corneal disorders.</p>
                     <a href="#" class="inline-flex items-center mt-4 text-[var(--primary-color)] text-sm">Read more
                         →</a>
                 </div>
 
                 <div class="p-6 bg-gray-100 rounded-xl border-[#E5E7EB]">
-                    <h3 class="text-2xl font-semibold">Vitreo Retina</h3>
+                    <h3 class="lg:text-2xl text-xl font-semibold">Vitreo Retina</h3>
                     <p class="text-gray-600 mt-2">Advanced diagnosis & treatment for retinal diseases.</p>
                     <a href="#" class="inline-flex items-center mt-4 text-[var(--primary-color)] text-sm">Read more
                         →</a>
                 </div>
 
                 <div class="p-6 bg-gray-100 rounded-xl border-[#E5E7EB]">
-                    <h3 class="text-2xl font-semibold">Glaucoma</h3>
+                    <h3 class="lg:text-2xl text-xl font-semibold">Glaucoma</h3>
                     <p class="text-gray-600 mt-2">Long-term management to control eye pressure.</p>
                     <a href="#" class="inline-flex items-center mt-4 text-[var(--primary-color)] text-sm">Read more
                         →</a>
                 </div>
 
                 <div class="p-6 bg-gray-100 rounded-xl border-[#E5E7EB]">
-                    <h3 class="text-2xl font-semibold">Oculoplasty</h3>
+                    <h3 class="lg:text-2xl text-xl font-semibold">Oculoplasty</h3>
                     <p class="text-gray-600 mt-2">Procedures for eyelids, tear ducts & facial structures.</p>
                     <a href="#" class="inline-flex items-center mt-4 text-[var(--primary-color)] text-sm">Read more
                         →</a>
                 </div>
 
                 <div class="p-6 bg-gray-100 rounded-xl border-[#E5E7EB]">
-                    <h3 class="text-2xl font-semibold">Squint</h3>
+                    <h3 class="lg:text-2xl text-xl font-semibold">Squint</h3>
                     <p class="text-gray-600 mt-2">Treatment for drifting or misaligned eyes.</p>
                     <a href="#" class="inline-flex items-center mt-4 text-[var(--primary-color)] text-sm">Read more
                         →</a>
@@ -365,17 +560,17 @@
             </div>
 
             <!-- LASER CONTENT -->
-            <div id="laser" class="tab-content hidden grid md:grid-cols-3 gap-6 mt-12">
+            <div id="laser" class="tab-content hidden grid lg:grid-cols-4 sm:grid-cols-2 lg:gap-6 gap-5 mt-12">
 
                 <div class="p-6 bg-gray-100 rounded-xl border-[#E5E7EB]">
-                    <h3 class="text-2xl font-semibold">LASIK</h3>
+                    <h3 class="lg:text-2xl text-xl font-semibold">LASIK</h3>
                     <p class="text-gray-600 mt-2">Laser vision correction for glasses-free clarity.</p>
                     <a href="#" class="inline-flex items-center mt-4 text-[var(--primary-color)] text-sm">Read more
                         →</a>
                 </div>
 
                 <div class="p-6 bg-gray-100 rounded-xl border-[#E5E7EB]">
-                    <h3 class="text-2xl font-semibold">PRK</h3>
+                    <h3 class="lg:text-2xl text-xl font-semibold">PRK</h3>
                     <p class="text-gray-600 mt-2">Safe laser correction specially for thin corneas.</p>
                     <a href="#" class="inline-flex items-center mt-4 text-[var(--primary-color)] text-sm">Read more
                         →</a>
@@ -384,17 +579,17 @@
             </div>
 
             <!-- DIAGNOSTIC CONTENT -->
-            <div id="diagnostic" class="tab-content hidden grid md:grid-cols-3 gap-6 mt-12">
+            <div id="diagnostic" class="tab-content hidden grid lg:grid-cols-4 sm:grid-cols-2 lg:gap-6 gap-5 mt-12">
 
                 <div class="p-6 bg-gray-100 rounded-xl border-[#E5E7EB]">
-                    <h3 class="text-2xl font-semibold">OCT Scan</h3>
+                    <h3 class="lg:text-2xl text-xl font-semibold">OCT Scan</h3>
                     <p class="text-gray-600 mt-2">Retinal imaging for early detection of diseases.</p>
                     <a href="#" class="inline-flex items-center mt-4 text-[var(--primary-color)] text-sm">Read more
                         →</a>
                 </div>
 
                 <div class="p-6 bg-gray-100 rounded-xl border-[#E5E7EB]">
-                    <h3 class="text-2xl font-semibold">Visual Fields</h3>
+                    <h3 class="lg:text-2xl text-xl font-semibold">Visual Fields</h3>
                     <p class="text-gray-600 mt-2">Accurate test for glaucoma & optic nerve health.</p>
                     <a href="#" class="inline-flex items-center mt-4 text-[var(--primary-color)] text-sm">Read more
                         →</a>
@@ -412,23 +607,25 @@
         </div>
     </section>
 
-    <section class="py-16 bg-[url('/assets/images/why/why-bg.jpg')] bg-cover relative overflow-hidden">
+    <section class="md:py-16 sm:py-12 py-8 bg-[url('assets/images/why/why-bg.jpg')] bg-cover relative overflow-hidden">
         <div class="container">
-            <h2 class="text-center font-semibold mb-3 my-font text-4xl">Why Choose Us</h2>
-            <p class="text-[#4b4b4b] text-xl text-center mb-12 my-font">All essential eye care services in one place.
+            <h2 class="text-center font-semibold lg:mb-3 mb-2 my-font text-2xl sm:text-3xl lg:text-4xl">Why Choose Us
+            </h2>
+            <p class="text-[#4b4b4b] lg:text-xl sm:text-lg text-sm text-center mb-12 my-font">All essential eye care
+                services in one place.
             </p>
             <!-- MAIN GRID -->
-            <div class="mt-16 grid grid-cols-1 md:grid-cols-4 items-center">
+            <div class="mt-16 grid grid-cols-1 xl:gap-0 gap-5 lg:grid-cols-4 items-center">
 
                 <!-- LEFT FEATURES -->
-                <div class="space-y-14 text-center md:text-right">
+                <div class="space-y-14 text-center md:text-right md:block grid grid-cols-1 sm:grid-cols-2 gap-10">
 
                     <!-- Feature 1 -->
                     <div class="text-center">
                         <div class="flex justify-center">
                             <img src="assets/images/why/vision-icon.svg" alt="">
                         </div>
-                        <h3 class="text-2xl font-semibold mt-3 my-font">Vision assessment</h3>
+                        <h3 class="sm:text-2xl text-xl font-semibold mt-3 my-font">Vision assessment</h3>
                         <p class="text-gray-600 mt-2">
                             Thorough testing uncovers the true condition of your vision and helps us understand the
                             best treatment possibilities for you.
@@ -440,7 +637,7 @@
                         <div class="flex justify-center">
                             <img src="assets/images/why/laser-icon.svg" alt="">
                         </div>
-                        <h3 class="text-2xl font-semibold mt-3 my-font">Laser correction</h3>
+                        <h3 class="sm:text-2xl text-xl font-semibold mt-3 my-font">Laser correction</h3>
                         <p class="text-gray-600 mt-2">
                             Modern techniques reshape the cornea with precision accuracy and minimal recovery downtime.
                         </p>
@@ -448,20 +645,21 @@
 
                 </div>
 
+
                 <!-- CENTER IMAGE -->
                 <div class="flex justify-center col-span-2">
                     <img src="assets/images/why/why-img.png" alt="Eye Care" class="object-contain" />
                 </div>
 
                 <!-- RIGHT FEATURES -->
-                <div class="space-y-14 text-center md:text-left">
+                <div class="space-y-14 text-center md:text-right md:block grid grid-cols-1 sm:grid-cols-2 gap-10">
 
                     <!-- Feature 3 -->
                     <div class="text-center">
                         <div class="flex justify-center">
                             <img src="assets/images/why/dia-icon.svg" alt="">
                         </div>
-                        <h3 class="text-2xl font-semibold mt-3 my-font">Advanced diagnostics</h3>
+                        <h3 class="sm:text-2xl text-xl font-semibold mt-3 my-font">Advanced diagnostics</h3>
                         <p class="text-gray-600 mt-2">
                             Our imaging catches disease before symptoms appear, ensuring treatment works at its best.
                         </p>
@@ -472,7 +670,7 @@
                         <div class="flex justify-center">
                             <img src="assets/images/why/treat-ment-icon.svg" alt="">
                         </div>
-                        <h3 class="text-2xl font-semibold mt-3 my-font">Condition treatment</h3>
+                        <h3 class="sm:text-2xl text-xl font-semibold mt-3 my-font">Condition treatment</h3>
                         <p class="text-gray-600 mt-2">
                             Years of focused practice strengthen how we effectively manage complex eye disorders.
                         </p>
@@ -484,10 +682,12 @@
         </div>
     </section>
 
-    <section class="py-16 bg-white">
+    <section class="md:py-16 sm:py-12 py-8 bg-white">
         <div class="container">
-            <h2 class="text-center font-semibold mb-3 my-font text-4xl">What Our Patients Say</h2>
-            <p class="text-[#4b4b4b] text-xl text-center mb-12 my-font">Real experiences from people who trust our care.
+            <h2 class="text-center font-semibold lg:mb-3 mb-2 my-font text-2xl sm:text-3xl lg:text-4xl">What Our
+                Patients Say</h2>
+            <p class="text-[#4b4b4b] lg:text-xl sm:text-lg text-sm text-center mb-12 my-font">Real experiences from
+                people who trust our care.
             </p>
 
             <div class="testimonial-slider mb-6">
@@ -578,32 +778,36 @@
 
     <section class="pt-5 ">
         <div class="container ">
-            <div class="py-8 px-10 rounded-xl bg-[var(--primary-color)] flex justify-between items-center">
-                <div class="text-white">
-                    <h2 class="font-semibold my-font text-2xl mb-1">Advanced Care, Made Accessible</h2>
-                    <p class="font-light">Schedule your evaluation and understand the right care for your vision.</p>
+            <div class="py-8 sm:px-10 px-8 rounded-xl bg-[var(--primary-color)]
+            flex flex-col items-center text-center
+            lg:flex-row lg:justify-between lg:items-center lg:text-left">
+                <div class="text-white ">
+                    <h2 class="font-semibold my-font text-xl md:text-2xl mb-1">Advanced Care, Made Accessible</h2>
+                    <p class="font-light lg:text-base text-sm">Schedule your evaluation and understand the right care
+                        for your vision.</p>
                 </div>
                 <a href="#"
-                    class="bg-green-600 text-white px-8 py-3 rounded-md font-medium hover:bg-green-700 transition cursor-pointer">Book
+                    class="bg-green-600 text-white lg:mt-0 mt-5 lg:text-base text-sm px-8 py-3 inline-block rounded-md font-medium hover:bg-green-700 transition cursor-pointer">Book
                     Appointment</a>
             </div>
-
         </div>
     </section>
 
-    <section class="py-16 bg-white">
+    <section class="md:py-16 sm:py-12 py-8 bg-white">
         <div class="container">
-            <h2 class="text-center font-semibold mb-3 my-font text-4xl">Blogs & Updates</h2>
-            <p class="text-[#4b4b4b] text-xl text-center mb-12 my-font">Easy-to-understand guides and stories about eye
+            <h2 class="text-center font-semibold lg:mb-3 mb-2 my-font text-2xl sm:text-3xl lg:text-4xl">Blogs & Updates
+            </h2>
+            <p class="text-[#4b4b4b] lg:text-xl sm:text-lg text-sm text-center sm:mb-12 mb-10 my-font">Easy-to-understand guides
+                and stories about eye
                 health.
             </p>
             <!-- Blog Cards Grid -->
-            <div class="grid md:grid-cols-3 gap-8 mt-14">
+            <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 sm:mt-14 mt-10">
 
                 <!-- CARD 1 -->
                 <div class="bg-white">
                     <a href="#" class="rounded-xl block overflow-hidden mb-4">
-                        <img src="assets/images/blogs/blog-1.png" class="w-full h-70 object-cover" alt="">
+                        <img src="assets/images/blogs/blog-1.png" class="w-full lg:h-70 h-60 object-cover" alt="">
                     </a>
 
                     <!-- Category Tag -->
@@ -611,11 +815,11 @@
                         Eye Health
                     </span>
 
-                    <h3 class="text-lg font-semibold mt-3 hover:text-[var(--primary-color)] transition">
+                    <h3 class="text-xl font-semibold mt-3 hover:text-[var(--primary-color)] transition">
                         How Regular Eye Exams Protect Your Vision
                     </h3>
 
-                    <p class="text-gray-600 text-sm mt-2">
+                    <p class="text-gray-600 mt-2">
                         Routine checkups help detect early changes in vision
                         and prevent long-term damage.
                     </p>
@@ -629,7 +833,7 @@
                 <!-- CARD 2 -->
                 <div class="bg-white">
                     <a href="#" class="rounded-xl block overflow-hidden mb-4">
-                        <img src="assets/images/blogs/blog-2.png" class="w-full h-70 object-cover" alt="">
+                        <img src="assets/images/blogs/blog-2.png" class="w-full lg:h-70 h-60 object-cover" alt="">
                     </a>
 
                     <!-- Category Tag -->
@@ -637,11 +841,11 @@
                         Cataract Care
                     </span>
 
-                    <h3 class="text-lg font-semibold mt-3 hover:text-[var(--primary-color)] transition">
+                    <h3 class="text-xl font-semibold mt-3 hover:text-[var(--primary-color)] transition">
                         Eye Treatments You Should Know About
                     </h3>
 
-                    <p class="text-gray-600 text-sm mt-2">
+                    <p class="text-gray-600 mt-2">
                         Advanced procedures today offer faster recovery and
                         clearer vision than ever before.
                     </p>
@@ -655,7 +859,7 @@
                 <!-- CARD 3 -->
                 <div class="bg-white">
                     <a href="#" class="rounded-xl block overflow-hidden mb-4">
-                        <img src="assets/images/blogs/blog-3.png" class="w-full h-70 object-cover" alt="">
+                        <img src="assets/images/blogs/blog-3.png" class="w-full lg:h-70 h-60 object-cover" alt="">
                     </a>
 
                     <!-- Category Tag -->
@@ -663,11 +867,11 @@
                         Laser Vision
                     </span>
 
-                    <h3 class="text-lg font-semibold mt-3 hover:text-[var(--primary-color)] transition">
+                    <h3 class="text-xl font-semibold mt-3 hover:text-[var(--primary-color)] transition">
                         Is LASIK Right for You? A Complete Guide
                     </h3>
 
-                    <p class="text-gray-600 text-sm mt-2">
+                    <p class="text-gray-600 mt-2">
                         Learn how laser vision correction works and who can
                         benefit from the procedure.
                     </p>
@@ -708,9 +912,9 @@
                 <div>
                     <h3 class="font-semibold mb-3">About Company</h3>
                     <ul class="space-y-2 text-gray-300 text-sm">
-                        <li>• Our Mission</li>
-                        <li>• Our Vision</li>
-                        <li>• Director's Desk</li>
+                        <li class="list-disc ml-3.5"><a href="#">Our Mission</a></li>
+                        <li class="list-disc ml-3.5"><a href="#">Our Vision</a></li>
+                        <li class="list-disc ml-3.5"><a href="#">Director's Desk</a></li>
                     </ul>
                 </div>
 
@@ -718,9 +922,9 @@
                 <div>
                     <h3 class="font-semibold mb-3">Services</h3>
                     <ul class="space-y-2 text-gray-300 text-sm">
-                        <li>• Clinical Services</li>
-                        <li>• Laser Services</li>
-                        <li>• Diagnostic Services</li>
+                        <li class="list-disc ml-3.5"><a href="#">Clinical Services</a></li>
+                        <li class="list-disc ml-3.5"><a href="#">Laser Services</a></li>
+                        <li class="list-disc ml-3.5"><a href="#">Diagnostic Services</a></li>
                     </ul>
                 </div>
 
@@ -728,9 +932,9 @@
                 <div>
                     <h3 class="font-semibold mb-3">Others Links</h3>
                     <ul class="space-y-2 text-gray-300 text-sm">
-                        <li>• Career</li>
-                        <li>• Blogs</li>
-                        <li>• Contact Us</li>
+                        <li class="list-disc ml-3.5"><a href="#">Career</a></li>
+                        <li class="list-disc ml-3.5"><a href="#">Blogs</a></li>
+                        <li class="list-disc ml-3.5"><a href="#">Contact Us</a></li>
                     </ul>
                 </div>
 
@@ -738,9 +942,9 @@
                 <div>
                     <h3 class="font-semibold mb-3">Social Links</h3>
                     <ul class="space-y-2 text-gray-300 text-sm">
-                        <li>• Facebook</li>
-                        <li>• Instagram</li>
-                        <li>• Twitter</li>
+                        <li class="list-disc ml-3.5"><a href="#">Facebook</a></li>
+                        <li class="list-disc ml-3.5"><a href="#">Instagram</a></li>
+                        <li class="list-disc ml-3.5"><a href="#">Twitter</a></li>
                     </ul>
                 </div>
 
@@ -755,9 +959,6 @@
             </p>
         </div>
     </footer>
-
-
-
 
 
 
@@ -838,7 +1039,7 @@
     <script src="assets/libs/jquery/jquery-3.7.1.min.js"></script>
     <script src="assets/libs/slick/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
-    <!-- <script src="assets/js/script.js"></script> -->
+    <script src="assets/js/script.js"></script>
     <script>
         const serviceSelect = new Choices("#serviceSelect", {
             searchPlaceholderValue: "Search service...",
@@ -869,38 +1070,6 @@
             });
         });
     </script>
-
-    <script>
-        $(document).ready(function () {
-            $('.testimonial-slider').slick({
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                arrows: true,
-                dots: true,
-                infinite: true,
-                speed: 500,
-                autoplay: false,
-                responsive: [
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 2
-                        }
-                    },
-                    {
-                        breakpoint: 640,
-                        settings: {
-                            slidesToShow: 1
-                        }
-                    }
-                ]
-            });
-        });
-    </script>
-
-
-
-
 
 
 </body>
