@@ -6,6 +6,7 @@ window.onscroll = function () {
         nav.classList.remove("scroll-on");
     }
 };
+
 const tabButtons = document.querySelectorAll(".tab-btn");
 const tabContents = document.querySelectorAll(".tab-content");
 
@@ -81,10 +82,10 @@ document.querySelectorAll(".dropdown-toggle").forEach((btn) => {
         const icon = btn.querySelector("i");
 
         if (submenu.style.maxHeight) {
-            submenu.style.maxHeight = null;     // Collapse
+            submenu.style.maxHeight = null;
             icon.classList.remove("rotate-180");
         } else {
-            submenu.style.maxHeight = submenu.scrollHeight + "px";  // Expand
+            submenu.style.maxHeight = submenu.scrollHeight + "px";
             icon.classList.add("rotate-180");
         }
     });
@@ -96,6 +97,7 @@ function closeMenuHandler() {
     backdrop.classList.remove("opacity-100", "visible");
     body.classList.remove("overflow-hidden");
 }
+
 
 
 

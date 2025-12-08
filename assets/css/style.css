@@ -209,8 +209,9 @@ header.scroll-on {
 .choices__list--single .choices__item {
     font-size: 1rem;
 }
+
 .choices {
-margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .slick-dots {
@@ -219,4 +220,11 @@ margin-bottom: 0;
 
 .slick-dots {
     margin-top: 20px;
+}
+
+.active-link {
+    color: #1d4ed8;
+    background-color: #eff6ff;
+    border-color: #93c5fd;
+    font-weight: 600;
 }
